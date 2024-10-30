@@ -1,38 +1,38 @@
 [
     {
-        "image": "..assets/data/baguette-icon.png",
+        "image": "assets/data/baguette-icon.png",
         "name": "baguette"
     },
     {
-        "image": "..assets/data/butter-piece-color-icon.png",
+        "image": "assets/data/butter-piece-color-icon.png",
         "name": "butter"
     },
     {
-        "image": "..assets/data/cake-cup-color-icon.png",
+        "image": "assets/data/cake-cup-color-icon.png",
         "name": "cupcake"
     },
     {
-        "image": "..assets/data/cheese-piece-icon.png",
+        "image": "assets/data/cheese-piece-icon.png",
         "name": "cheese"
     },
     {
-        "image": "..assets/data/chips-icon.png",
+        "image": "assets/data/chips-icon.png",
         "name": "chips"
     },
     {
-        "image": "..assets/data/chocolate-color-icon.png",
+        "image": "assets/data/chocolate-color-icon.png",
         "name": "chocolate"
     },
     {
-        "image": "..assets/data/cocktail-glass-icon.png",
+        "image": "assets/data/cocktail-glass-icon.png",
         "name": "cocktail"
     },
     {
-        "image": "..assets/data/cookie-icon.png",
+        "image": "assets/data/cookie-icon.png",
         "name": "cookie"
     },
     {
-        "image": "..assets/data/disposable-coffee-paper-cup-icon.png",
+        "image": "assets/data/disposable-coffee-paper-cup-icon.png",
         "name": "coffee"
     }
 ]

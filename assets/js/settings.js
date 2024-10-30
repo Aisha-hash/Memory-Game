@@ -2,10 +2,10 @@
 
 const settings = {
     cards: [],
-    firstCard, secondCard,
-    lockBoard: false,
+    elements: {},
     score: 0
 }
 
 export default settings;
+export const elements = settings.elements;
 export const cards = settings.cards;
