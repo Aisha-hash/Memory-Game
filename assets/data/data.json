@@ -34,5 +34,49 @@
     {
         "image": "assets/data/disposable-coffee-paper-cup-icon.png",
         "name": "coffee"
+    },
+    {
+        "image": "assets/data/fried-egg-icon.png",
+        "name": "friedEgg"
+    },
+    {
+        "image": "assets/data/glass-drinks-color-icon.png",
+        "name": "glass-drinks"
+    },
+    {
+        "image": "assets/data/ice-cream-color-icon.png",
+        "name": "ice-cream-color"
+    },
+    {
+        "image": "assets/data/ice-cream-stick-icon.png",
+        "name": "ice-cream-stick"
+    },
+    {
+        "image": "assets/data/macarons-color-icon.png",
+        "name": "macarons"
+    },
+    {
+        "image": "assets/data/milk-bottle-color-icon.png",
+        "name": "milk"
+    },
+    {
+        "image": "assets/data/peanut-beans-icon.png",
+        "name": "peanut"
+    },
+    {
+        "image": "assets/data/pizza-icon.png",
+        "name": "pizza"
+    },
+    {
+        "image": "assets/data/soda-drink-icon.png",
+        "name": "sodaDrink"
+    },
+    {
+        "image": "assets/data/toast-color-icon.png",
+        "name": "toast"
+    },
+    {
+        "image": "assets/data/tomato-ketchup-icon.png",
+        "name": "tomato"
     }
 ]

@@ -13,8 +13,21 @@
 
 <body>
     <h1>Memory Game</h1>
+    <div class="data">
+        <div class="levelSelector">
+            <select name="level" id="level">
+                <option value="levelOne" selected>Level 1</option>
+                <option value="levelTwo">Level 2</option>
+                <option value="levelThree">Level 3</option>
+                <option value="levelFour">Level 4</option>
+                <option value="levelFive">Level 5</option>
+            </select>
+        </div>
+        <div>Score: <span class="score"></span></div>
+        <div class="timer">00:00</div>
+    </div>
+
     <div class="game-container" id="game-container"></div>
-    <p>Score: <span class="score"></span></p>
     <div class="btn">
         <button id="reset-button">Reset Game</button>
     </div>

@@ -3,7 +3,9 @@
 const settings = {
     cards: [],
     elements: {},
-    score: 0
+    score: 0,
+    elapsedTime: 0,
+    level: 2
 }
 
 export default settings;

@@ -1,6 +1,6 @@
 'use strict';
 import dom from './dom.js';
-import { elements } from './settings.js';
+import settings, { elements } from './settings.js';
 import ajax from './ajax.js';
 
 // let score = 0;
@@ -8,6 +8,7 @@ import ajax from './ajax.js';
 const init = () => {
     dom.mapping();
     ajax.loadData();
+    dom.appendEventListeners();
     //display score
     // elements.scoreText.textContent = score;
 }

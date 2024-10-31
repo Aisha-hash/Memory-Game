@@ -1,5 +1,5 @@
 'use strict';
-
+import game from './game.js';
 import { elements } from './settings.js';
 
 const dom = {
@@ -25,9 +25,11 @@ const dom = {
     mapping() {
         elements.gameContainer = dom.$('.game-container');
         elements.scoreText = dom.$('.score');
+        elements.timer = dom.$('.timer');
+        elements.selector = dom.$('#level');
     },
     appendEventListeners() {
-
+        elements.selector.addEventListener('change', game.handleChange);
     }
 }
 

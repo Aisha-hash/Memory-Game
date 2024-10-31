@@ -14,13 +14,16 @@ const ajax = {
     handleLoad(evt) {
         let xhr = evt.target;
         if (xhr.status == 200) {
-            ajax.processData(JSON.parse(xhr.response));
+            ajax.processData(JSON.parse(xhr.response), level);
         } else {
             console.warn(`${xhr.responseURL} konnte nicht geladen werden.Grund: ${xhr.statusText}`);
         }
     },
     processData(payload) {
-        cards = [...payload, ...payload];
+        //get the num of cards required based on the level.
+        let level = settings.level;
+        const numCards = payload.splice(0, level);
+        cards = [...numCards, ...numCards];
         generate.shuffleCards(cards);
         generate.generateCards(cards);
     }
