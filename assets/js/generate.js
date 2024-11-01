@@ -38,8 +38,8 @@ const generate = {
                    <div class="back"></div>`;
 
             //set height and width of each card
-            cardElement.style.width = settings.width;
-            cardElement.style.height = `calc(${settings.width}/2 *3)`;
+            cardElement.style.width = settings.cardsWidth;
+            cardElement.style.height = `calc(${settings.cardsWidth}/2 *3)`;
             elements.gameContainer.appendChild(cardElement);
             cardElement.addEventListener('click', flipCard);
         }
@@ -56,7 +56,8 @@ const generate = {
         const seconds = settings.elapsedTime % 60;
 
         // Format the time to always show two digits
-        elements.timer.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`
+        settings.time = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`
+        elements.timer.textContent = settings.time;
     }
 }
 

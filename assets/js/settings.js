@@ -7,11 +7,12 @@ const settings = {
     score: 0,
     elapsedTime: 0,
     level: 1,
-    width: 140,
+    cardsWidth: 140,
     flipped: 0,
     numOfCards: 2,
     timerCounter: 0,
-    previousScore: 0
+    previousScore: 0,
+    time: 0
 }
 
 export default settings;

@@ -3,6 +3,7 @@
 import generate from "./generate.js";
 import settings, { elements } from "./settings.js";
 import level from "./levels.js";
+import dom from "./dom.js";
 
 let lockBoard = false;
 let firstCard, secondCard;
@@ -93,14 +94,44 @@ const resetBoard = () => {
 
 const checkIfDone = () => {
     settings.flipped = 0;
-    const userConfirm = confirm('move to next level?');
-    if (userConfirm) {
-        //move to other level
-        settings.level += 1;
-        elements.selector.value = String(settings.level);
-        const event = new Event('change');
-        elements.selector.dispatchEvent(event);
-    }
+    /*  const userConfirm = confirm('move to next level?');
+     if (userConfirm) {
+         //move to other level
+         
+     } */
+    elements.displayElement = dom.create(false, 'div', false, 'display');
+
+    elements.displayElement.innerHTML = `
+        <p>Level Cleared!!!</p>
+        <div class="results">
+            <p class="score">Score: ${settings.score}</p>
+            <p class="score">Highscore: ${settings.previousScore}</p>
+            <p>Time: ${settings.time}</p>
+            <p>No. of Clicks:</p>
+            </div>
+            <div class="nextLevel">
+            <p>Move to next Level?</p>
+            <button class="btn yes">Yes</button>
+            <button class="btn no">Cancel</button></div>
+         `;
+    elements.gameContainer.before(elements.displayElement);
+    elements.gameContainer.style.display = 'none';
+    elements.resetButton.style.display = 'none';
+    clearInterval(settings.timerCounter);
+    elements.confirmButton = elements.displayElement.querySelector('.yes');
+    elements.cancelButton = elements.displayElement.querySelector('.no');
+    elements.confirmButton.addEventListener('click', moveToNextLevel);
+    elements.cancelButton.addEventListener('click', () => console.log('yes'));
+}
+
+const moveToNextLevel = (displayElement) => {
+    console.log('next level');
+    settings.level += 1;
+    elements.selector.value = String(settings.level);
+    const event = new Event('change');
+    elements.selector.dispatchEvent(event);
+    elements.gameContainer.style.display = 'grid';
+    elements.displayElement.remove();
 }
 
 

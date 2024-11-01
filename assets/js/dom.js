@@ -28,6 +28,8 @@ const dom = {
         elements.timer = dom.$('.timer');
         elements.selector = dom.$('#level');
         elements.body = dom.$('body');
+        elements.results = dom.$('.results');
+        elements.resetButton = dom.$('#reset-button');
     },
     appendEventListeners() {
         window.addEventListener('load', onLoad());
