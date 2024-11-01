@@ -1,9 +1,9 @@
 'use strict';
 
-import settings, { elements } from "./settings.js";
+import settings from "./settings.js";
 import generate from "./generate.js";
-let cards = settings.cards;
 
+let cards = settings.cards;
 const ajax = {
     loadData() {
         const xhr = new XMLHttpRequest();
@@ -21,9 +21,10 @@ const ajax = {
     },
     processData(payload) {
         //get the num of cards required based on the level.
-        let level = settings.level;
+        let level = settings.numOfCards;
         const numCards = payload.splice(0, level);
         cards = [...numCards, ...numCards];
+        settings.cardsLength = cards.length;
         generate.shuffleCards(cards);
         generate.generateCards(cards);
     }

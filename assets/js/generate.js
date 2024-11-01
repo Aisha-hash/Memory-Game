@@ -16,13 +16,14 @@ const generate = {
         }
     },
 
-
     generateCards(cards) {
-        //start timer
+        //set score
         generate.setScore(settings.score);
-        setInterval(() => {
-            settings.elapsedTime++;
-            updateTimer();
+
+        //start timer
+        settings.timerCounter = setInterval(() => {
+            settings.elapsedTime += 1;
+            generate.updateTimer();
         }, 1000);
 
         //generate cards
@@ -36,22 +37,27 @@ const generate = {
                    </div>
                    <div class="back"></div>`;
 
+            //set height and width of each card
+            cardElement.style.width = settings.width;
+            cardElement.style.height = `calc(${settings.width}/2 *3)`;
             elements.gameContainer.appendChild(cardElement);
-
-
-            cardElement.addEventListener('click', flipCard)
+            cardElement.addEventListener('click', flipCard);
         }
     },
+
     setScore(score) {
         elements.scoreText.innerText = score;
+        settings.previousScore = Math.max(score, settings.previousScore);
+        localStorage.setItem('score', JSON.stringify(settings.previousScore));
+    },
+
+    updateTimer() {
+        const minutes = Math.floor((settings.elapsedTime % 3600) / 60);
+        const seconds = settings.elapsedTime % 60;
+
+        // Format the time to always show two digits
+        elements.timer.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`
     }
 }
 
-const updateTimer = () => {
-    const minutes = Math.floor((settings.elapsedTime % 3600) / 60);
-    const seconds = settings.elapsedTime % 60;
-
-    // Format the time to always show two digits
-    elements.timer.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`
-}
 export default generate;

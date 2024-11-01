@@ -2,7 +2,7 @@
 
 import generate from "./generate.js";
 import settings, { elements } from "./settings.js";
-import ajax from "./ajax.js";
+import level from "./levels.js";
 
 let lockBoard = false;
 let firstCard, secondCard;
@@ -26,76 +26,84 @@ const game = {
 
     checkForMatch() {
         let isMatch = firstCard.dataset.name === secondCard.dataset.name;
-        isMatch ? disableCards() : unflipCards();
+        isMatch ? game.disableCards(firstCard, secondCard) : game.unflipCards();
+    },
+
+    disableCards(firstCard, secondCard) {
+        settings.flipped += 1;
+        settings.score += 1; //update score display
+        generate.setScore(settings.score);
+        setTimeout(() => {
+            firstCard.classList.add('matchedCard');
+            secondCard.classList.add('matchedCard');
+        }, 1000);
+        firstCard.removeEventListener("click", flipCard);
+        secondCard.removeEventListener("click", flipCard);
+        resetBoard();
+    },
+
+    unflipCards() {
+        setTimeout(() => {
+            firstCard.classList.remove("flipped");
+            secondCard.classList.remove("flipped");
+            resetBoard();
+        }, 1000);
     },
 
     handleChange(evt) {
-        const selectedValue = evt.target.value;
-        if (selectedValue === 'levelOne') {
-            settings.level = 2;
-            elements.gameContainer.innerHTML = '';
-            elements.gameContainer.style.gridTemplateColumns = 'repeat(2,140px)';
-            elements.gameContainer.style.gridTemplateRows = 'repeat(2, calc(140px/2 *3))';
-            ajax.loadData();
-            return;
-        } else if (selectedValue === 'levelTwo') {
-            settings.level = 4;
-            elements.gameContainer.innerHTML = '';
-            elements.gameContainer.style.gridTemplateColumns = 'repeat(4,140px)';
-            elements.gameContainer.style.gridTemplateRows = 'repeat(2, calc(140px/2 *3))';
-            ajax.loadData();
-            return;
-        } else if (selectedValue === 'levelThree') {
-            settings.level = 6;
-            elements.gameContainer.innerHTML = '';
-            elements.gameContainer.style.gridTemplateColumns = 'repeat(4,140px)';
-            elements.gameContainer.style.gridTemplateRows = 'repeat(3, calc(140px/2 *3))';
-            ajax.loadData();
-            return;
-        }
+        //if event is triggered by user, reset score
+        if (evt.isTrusted) {
+            settings.score = 0;
+            settings.elapsedTime = 0;
 
-        else if (selectedValue === 'levelFour') {
-            settings.level = 9;
-            elements.gameContainer.innerHTML = '';
-            elements.gameContainer.style.gridTemplateColumns = 'repeat(6,140px)';
-            elements.gameContainer.style.gridTemplateRows = 'repeat(3, calc(140px/2 *3))';
-            ajax.loadData();
+        }
+        const selectedValue = evt.target.value;
+        clearInterval(settings.timerCounter);
+        if (selectedValue === '1') {
+            level.levelOne();
+            return;
+        } else if (selectedValue === '2') {
+            level.levelTwo();
+            return;
+        } else if (selectedValue === '3') {
+            level.levelThree();
+            return;
+        } else if (selectedValue === '4') {
+            level.levelFour();
+            return;
+        } else if (selectedValue === '5') {
+            level.levelFive();
             return;
         }
-        else if (selectedValue === 'levelFive') {
-            settings.level = 12;
-            elements.gameContainer.innerHTML = '';
-            elements.gameContainer.style.gridTemplateColumns = 'repeat(6,140px)';
-            elements.gameContainer.style.gridTemplateRows = 'repeat(4, calc(140px/2 *3))';
-            ajax.loadData();
-            return;
-        }
+    },
+
+    onLoad() {
+        settings.previousScore = JSON.parse(localStorage.getItem('score'));
+        settings.previousScore = settings.previousScore ? settings.previousScore : 0;
     }
 }
 
-const disableCards = () => {
 
-    settings.score += 1;
-    generate.setScore(settings.score);
-    firstCard.removeEventListener("click", flipCard);
-    secondCard.removeEventListener("click", flipCard);
-
-    resetBoard();
-}
-
-const unflipCards = () => {
-    setTimeout(() => {
-        firstCard.classList.remove("flipped");
-        secondCard.classList.remove("flipped");
-        resetBoard();
-    }, 1000);
-}
-
-function resetBoard() {
+const resetBoard = () => {
     firstCard = null;
     secondCard = null;
     lockBoard = false;
+    if ((settings.cardsLength / 2 == settings.flipped) && settings.level < 5) setTimeout(checkIfDone, 2000);
 }
 
+const checkIfDone = () => {
+    settings.flipped = 0;
+    const userConfirm = confirm('move to next level?');
+    if (userConfirm) {
+        //move to other level
+        settings.level += 1;
+        elements.selector.value = String(settings.level);
+        const event = new Event('change');
+        elements.selector.dispatchEvent(event);
+    }
+}
+
+
 export const flipCard = game.flipCard;
-export default game;
+export const handleChange = game.handleChange;
+export const onLoad = game.onLoad;
