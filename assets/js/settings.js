@@ -12,7 +12,8 @@ const settings = {
     numOfCards: 2,
     timerCounter: 0,
     previousScore: 0,
-    time: 0
+    seconds: 0,
+    minutes: 0
 }
 
 export default settings;

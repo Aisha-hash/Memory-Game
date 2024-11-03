@@ -1,82 +1,194 @@
-[
-    {
-        "image": "assets/data/baguette-icon.png",
-        "name": "baguette"
-    },
-    {
-        "image": "assets/data/butter-piece-color-icon.png",
-        "name": "butter"
-    },
-    {
-        "image": "assets/data/cake-cup-color-icon.png",
-        "name": "cupcake"
-    },
-    {
-        "image": "assets/data/cheese-piece-icon.png",
-        "name": "cheese"
-    },
-    {
-        "image": "assets/data/chips-icon.png",
-        "name": "chips"
-    },
-    {
-        "image": "assets/data/chocolate-color-icon.png",
-        "name": "chocolate"
-    },
-    {
-        "image": "assets/data/cocktail-glass-icon.png",
-        "name": "cocktail"
-    },
-    {
-        "image": "assets/data/cookie-icon.png",
-        "name": "cookie"
-    },
-    {
-        "image": "assets/data/disposable-coffee-paper-cup-icon.png",
-        "name": "coffee"
-    },
-    {
-        "image": "assets/data/fried-egg-icon.png",
-        "name": "friedEgg"
-    },
-    {
-        "image": "assets/data/glass-drinks-color-icon.png",
-        "name": "glass-drinks"
-    },
-    {
-        "image": "assets/data/ice-cream-color-icon.png",
-        "name": "ice-cream-color"
-    },
-    {
-        "image": "assets/data/ice-cream-stick-icon.png",
-        "name": "ice-cream-stick"
-    },
-    {
-        "image": "assets/data/macarons-color-icon.png",
-        "name": "macarons"
-    },
-    {
-        "image": "assets/data/milk-bottle-color-icon.png",
-        "name": "milk"
-    },
-    {
-        "image": "assets/data/peanut-beans-icon.png",
-        "name": "peanut"
-    },
-    {
-        "image": "assets/data/pizza-icon.png",
-        "name": "pizza"
-    },
-    {
-        "image": "assets/data/soda-drink-icon.png",
-        "name": "sodaDrink"
-    },
-    {
-        "image": "assets/data/toast-color-icon.png",
-        "name": "toast"
-    },
-    {
-        "image": "assets/data/tomato-ketchup-icon.png",
-        "name": "tomato"
-    }
-]
+{
+    "food": [
+        {
+            "image": "assets/data/food/baguette-icon.png",
+            "name": "baguette"
+        },
+        {
+            "image": "assets/data/food/butter-piece-color-icon.png",
+            "name": "butter"
+        },
+        {
+            "image": "assets/data/food/cake-cup-color-icon.png",
+            "name": "cupcake"
+        },
+        {
+            "image": "assets/data/food/cheese-piece-icon.png",
+            "name": "cheese"
+        },
+        {
+            "image": "assets/data/food/chips-icon.png",
+            "name": "chips"
+        },
+        {
+            "image": "assets/data/food/chocolate-color-icon.png",
+            "name": "chocolate"
+        },
+        {
+            "image": "assets/data/food/cocktail-glass-icon.png",
+            "name": "cocktail"
+        },
+        {
+            "image": "assets/data/food/cookie-icon.png",
+            "name": "cookie"
+        },
+        {
+            "image": "assets/data/food/disposable-coffee-paper-cup-icon.png",
+            "name": "coffee"
+        },
+        {
+            "image": "assets/data/food/fried-egg-icon.png",
+            "name": "friedEgg"
+        },
+        {
+            "image": "assets/data/food/glass-drinks-color-icon.png",
+            "name": "glass-drinks"
+        },
+        {
+            "image": "assets/data/food/ice-cream-color-icon.png",
+            "name": "ice-cream-color"
+        },
+        {
+            "image": "assets/data/food/ice-cream-stick-icon.png",
+            "name": "ice-cream-stick"
+        },
+        {
+            "image": "assets/data/food/macarons-color-icon.png",
+            "name": "macarons"
+        },
+        {
+            "image": "assets/data/food/milk-bottle-color-icon.png",
+            "name": "milk"
+        },
+        {
+            "image": "assets/data/food/peanut-beans-icon.png",
+            "name": "peanut"
+        },
+        {
+            "image": "assets/data/food/pizza-icon.png",
+            "name": "pizza"
+        },
+        {
+            "image": "assets/data/food/soda-drink-icon.png",
+            "name": "sodaDrink"
+        },
+        {
+            "image": "assets/data/food/toast-color-icon.png",
+            "name": "toast"
+        },
+        {
+            "image": "assets/data/food/tomato-ketchup-icon.png",
+            "name": "tomato"
+        }
+    ],
+    "animals": [
+        {
+            "image": "assets/data/animals/andesaurus-dinosaur-color-icon.png",
+            "name": "abc"
+        },
+        {
+            "image": "assets/data/animals/animal-camel-color-icon.png",
+            "name": "camel"
+        },
+        {
+            "image": "assets/data/animals/bear-animal-color-icon.png",
+            "name": "bear"
+        },
+        {
+            "image": "assets/data/animals/bear-face-color-icon.png",
+            "name": "bear-face"
+        },
+        {
+            "image": "assets/data/animals/bee-icon.png",
+            "name": "bee"
+        },
+        {
+            "image": "assets/data/animals/butterfly-color-icon.png",
+            "name": "butterfly"
+        },
+        {
+            "image": "assets/data/animals/cat-face-color-icon.png",
+            "name": "cat-face"
+        },
+        {
+            "image": "assets/data/animals/cat-icon.png",
+            "name": "cat"
+        },
+        {
+            "image": "assets/data/animals/cow-color-icon.png",
+            "name": "cow"
+        },
+        {
+            "image": "assets/data/animals/dog-face-color-icon.png",
+            "name": "dog"
+        },
+        {
+            "image": "assets/data/animals/dolphin-color-icon.png",
+            "name": "dolphin"
+        },
+        {
+            "image": "assets/data/animals/dove-pigeon-color-icon.png",
+            "name": "pigeon"
+        },
+        {
+            "image": "assets/data/animals/duck-color-icon.png",
+            "name": "duck"
+        },
+        {
+            "image": "assets/data/animals/elephant-color-icon.png",
+            "name": "elephant"
+        },
+        {
+            "image": "assets/data/animals/fish-color-icon.png",
+            "name": "fish"
+        },
+        {
+            "image": "assets/data/animals/frog-icon.png",
+            "name": "frog"
+        },
+        {
+            "image": "assets/data/animals/horse-color-icon.png",
+            "name": "horse"
+        },
+        {
+            "image": "assets/data/animals/lion-face-color-icon.png",
+            "name": "lion-face"
+        },
+        {
+            "image": "assets/data/animals/monkey-animal-color-icon.png",
+            "name": "monkey"
+        },
+        {
+            "image": "assets/data/animals/monkey-face-icon.png",
+            "name": "monkey-face"
+        },
+        {
+            "image": "assets/data/animals/panda-face-color-icon.png",
+            "name": "panda-face"
+        },
+        {
+            "image": "assets/data/animals/penguin-color-icon.png",
+            "name": "penguin"
+        },
+        {
+            "image": "assets/data/animals/pig-piggy-color-icon.png",
+            "name": "pig"
+        },
+        {
+            "image": "assets/data/animals/rooster-color-icon.png",
+            "name": "rooster"
+        },
+        {
+            "image": "assets/data/animals/shark-color-icon.png",
+            "name": "shark"
+        },
+        {
+            "image": "assets/data/animals/sparrow-bird-color-icon.png",
+            "name": "sparrow"
+        },
+        {
+            "image": "assets/data/animals/turtle-color-icon.png",
+            "name": "turtle"
+        }
+    ]
+}

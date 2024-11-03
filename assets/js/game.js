@@ -4,10 +4,13 @@ import generate from "./generate.js";
 import settings, { elements } from "./settings.js";
 import level from "./levels.js";
 import dom from "./dom.js";
+import welcome from './welcome.js';
+
 
 let lockBoard = false;
 let firstCard, secondCard;
-
+let elapsedMinutes = 0;
+let elapsedSeconds = 0;
 const game = {
     flipCard() {
         if (lockBoard) return;
@@ -79,6 +82,7 @@ const game = {
     },
 
     onLoad() {
+        welcome.welcomeScreen;
         settings.previousScore = JSON.parse(localStorage.getItem('score'));
         settings.previousScore = settings.previousScore ? settings.previousScore : 0;
     }
@@ -101,12 +105,15 @@ const checkIfDone = () => {
      } */
     elements.displayElement = dom.create(false, 'div', false, 'display');
 
+    elapsedMinutes = settings.minutes - elapsedMinutes;
+    elapsedSeconds = settings.seconds - elapsedSeconds;
+
     elements.displayElement.innerHTML = `
         <p>Level Cleared!!!</p>
         <div class="results">
             <p class="score">Score: ${settings.score}</p>
             <p class="score">Highscore: ${settings.previousScore}</p>
-            <p>Time: ${settings.time}</p>
+            <p>Time: ${String(elapsedMinutes).padStart(2, '0')}:${String(elapsedSeconds).padStart(2, '0')}</p>
             <p>No. of Clicks:</p>
             </div>
             <div class="nextLevel">

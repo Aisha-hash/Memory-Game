@@ -52,12 +52,11 @@ const generate = {
     },
 
     updateTimer() {
-        const minutes = Math.floor((settings.elapsedTime % 3600) / 60);
-        const seconds = settings.elapsedTime % 60;
+        settings.minutes = Math.floor((settings.elapsedTime % 3600) / 60);
+        settings.seconds = settings.elapsedTime % 60;
 
         // Format the time to always show two digits
-        settings.time = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`
-        elements.timer.textContent = settings.time;
+        elements.timer.textContent = `${String(settings.minutes).padStart(2, '0')}:${String(settings.seconds).padStart(2, '0')}`
     }
 }
 
