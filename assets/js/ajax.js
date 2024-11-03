@@ -14,8 +14,9 @@ const ajax = {
     handleLoad(evt) {
         let xhr = evt.target;
         if (xhr.status == 200) {
+            let type = settings.dataCards;
             let cards = JSON.parse(xhr.response);
-            ajax.processData(cards.food, level);
+            ajax.processData(cards[type], level);
         } else {
             console.warn(`${xhr.responseURL} konnte nicht geladen werden.Grund: ${xhr.statusText}`);
         }

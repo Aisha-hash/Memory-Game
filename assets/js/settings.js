@@ -13,7 +13,8 @@ const settings = {
     timerCounter: 0,
     previousScore: 0,
     seconds: 0,
-    minutes: 0
+    minutes: 0,
+    dataCards: 'food'
 }
 
 export default settings;

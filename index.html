@@ -12,7 +12,27 @@
 </head>
 
 <body>
-    <h1>Memory Game</h1>
+    <div class="header">
+        <h1>Memory Game</h1>
+    </div>
+    <div class="mainScreen">
+        <p>Select deck of cards to play</p>
+        <div class="decks">
+            <div class="deck">
+                <figure class="foodDeck"><img class="foodImg" src="assets/data/food/macarons-color-icon.png"
+                        width="140px" height="210px">
+
+                    <figcaption class="figCaption">Foods Deck</figcaption>
+                </figure>
+            </div>
+            <div class="deck">
+                <figure class="animalsDeck"><img class="animalImg" src="assets/data/animals/horse-color-icon.png"
+                        width="140px" height="210px">
+                    <figcaption class="figCaption">Animals Deck</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
     <div class="data">
         <div class="levelSelector">
             <select name="level" id="level">
@@ -23,12 +43,12 @@
                 <option value="5">Level 5</option>
             </select>
         </div>
-        <div>Score: <span class="score"></span></div>
+        <div class="scoreDisplay">Score: <span class="score"></span></div>
         <div class="timer">00:00</div>
     </div>
 
     <div class="game-container" id="game-container"></div>
-    <div class="results"></div>
+    <!-- <div class="results"></div> -->
     <div class="btn">
         <button id="reset-button">Reset Game</button>
     </div>

@@ -30,6 +30,10 @@ p {
     justify-content: center;
 }
 
+.header {
+    padding: 30px;
+}
+
 #reset-button {
     padding: 6px 8px;
     font-size: 20px;
@@ -150,4 +154,53 @@ p {
     margin-left: 20px;
     font-size: 20px;
     background-color: #c11e38;
+}
+
+.welcome {
+    margin: 100px auto;
+    text-align: center;
+    width: 40%;
+    padding: 40px 40px;
+}
+
+.mainScreen {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.decks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.foodDeck,
+.animalsDeck {
+    width: 150px;
+    height: 210px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 10px 20px 10px;
+    gap: 30px;
+    border-radius: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.foodImg,
+.animalImg {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+.figCaption {
+    font-size: 20px;
 }

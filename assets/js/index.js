@@ -4,7 +4,6 @@ import ajax from './ajax.js';
 
 const init = () => {
     dom.mapping();
-    ajax.loadData();
     dom.appendEventListeners();
 }
 

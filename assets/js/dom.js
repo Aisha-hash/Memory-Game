@@ -30,6 +30,11 @@ const dom = {
         elements.body = dom.$('body');
         elements.results = dom.$('.results');
         elements.resetButton = dom.$('#reset-button');
+        elements.data = dom.$('.data');
+        elements.welcome = dom.$('.header');
+        elements.foodDeckButton = dom.$('.foodDeck');
+        elements.animalsDeckButton = dom.$('.animalsDeck');
+        elements.mainScreen = dom.$('.mainScreen');
     },
     appendEventListeners() {
         window.addEventListener('load', onLoad());

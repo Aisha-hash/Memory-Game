@@ -82,9 +82,9 @@ const game = {
     },
 
     onLoad() {
-        welcome.welcomeScreen;
         settings.previousScore = JSON.parse(localStorage.getItem('score'));
         settings.previousScore = settings.previousScore ? settings.previousScore : 0;
+        welcome.welcomeScreen();
     }
 }
 
