@@ -14,7 +14,8 @@ const settings = {
     previousScore: 0,
     seconds: 0,
     minutes: 0,
-    dataCards: 'food'
+    dataCards: 'food',
+    numOfClicks: 0
 }
 
 export default settings;

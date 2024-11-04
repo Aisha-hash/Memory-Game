@@ -1,5 +1,5 @@
 'use strict';
-import { handleChange, onLoad } from './game.js';
+import { handleChange, onLoad, restart } from './game.js';
 import { elements } from './settings.js';
 
 const dom = {
@@ -35,10 +35,12 @@ const dom = {
         elements.foodDeckButton = dom.$('.foodDeck');
         elements.animalsDeckButton = dom.$('.animalsDeck');
         elements.mainScreen = dom.$('.mainScreen');
+        elements.numOfClicks = dom.$('.clicks')
     },
     appendEventListeners() {
         window.addEventListener('load', onLoad());
         elements.selector.addEventListener('change', handleChange);
+        elements.resetButton.addEventListener('click', restart);
     }
 }
 

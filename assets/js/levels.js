@@ -7,8 +7,7 @@ const level = {
     levelOne() {
         settings.level = 1;
         settings.numOfCards = 2;
-        elements.gameContainer.innerHTML = '';
-        settings.cardsWidth = '150px';
+        settings.cardsWidth = '9em';
         elements.gameContainer.style.gridTemplateColumns = `repeat(2,${settings.cardsWidth})`;
         elements.gameContainer.style.gridTemplateRows = `repeat(2, calc(${settings.cardsWidth}/2 *3))`;
         ajax.loadData();
@@ -16,8 +15,7 @@ const level = {
     levelTwo() {
         settings.level = 2;
         settings.numOfCards = 4;
-        elements.gameContainer.innerHTML = '';
-        settings.cardsWidth = '140px';
+        settings.cardsWidth = '9em';
         elements.gameContainer.style.gridTemplateColumns = `repeat(4,${settings.cardsWidth})`;
         elements.gameContainer.style.gridTemplateRows = `repeat(2, calc(${settings.cardsWidth}/2 *3))`;
         ajax.loadData();
@@ -26,7 +24,7 @@ const level = {
         settings.level = 3;
         settings.numOfCards = 6;
         elements.gameContainer.innerHTML = '';
-        settings.cardsWidth = '140px';
+        settings.cardsWidth = '7.8em';
         elements.gameContainer.style.gridTemplateColumns = `repeat(4,${settings.cardsWidth})`;
         elements.gameContainer.style.gridTemplateRows = `repeat(3, calc(${settings.cardsWidth}/2 *3))`;
         ajax.loadData();
@@ -34,8 +32,7 @@ const level = {
     levelFour() {
         settings.level = 4;
         settings.numOfCards = 9;
-        elements.gameContainer.innerHTML = '';
-        settings.cardsWidth = '120px';
+        settings.cardsWidth = '7.5em';
         elements.gameContainer.style.gridTemplateColumns = `repeat(6,${settings.cardsWidth})`;
         elements.gameContainer.style.gridTemplateRows = `repeat(3, calc(${settings.cardsWidth}/2 *3))`;
         ajax.loadData();
@@ -43,8 +40,7 @@ const level = {
     levelFive() {
         settings.level = 5;
         settings.numOfCards = 12;
-        elements.gameContainer.innerHTML = '';
-        settings.cardsWidth = '110px';
+        settings.cardsWidth = '6em';
         elements.gameContainer.style.gridTemplateColumns = `repeat(6,${settings.cardsWidth})`;
         elements.gameContainer.style.gridTemplateRows = `repeat(4, calc(${settings.cardsWidth}/2 *3))`;
         ajax.loadData();

@@ -8,6 +8,9 @@
     <title></title>
     <link rel="stylesheet" href="./assets/css/styles.css" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <script src="./assets/js/index.js" type="module" defer></script>
 </head>
 
@@ -15,6 +18,27 @@
     <div class="header">
         <h1>Memory Game</h1>
     </div>
+    <div class="data">
+        <div class="levelSelector">
+            <select name="level" id="level">
+                <option value="1" selected>Level 1</option>
+                <option value="2">Level 2</option>
+                <option value="3">Level 3</option>
+                <option value="4">Level 4</option>
+                <option value="5">Level 5</option>
+            </select>
+        </div>
+        <div class="scoreDisplay">Score: <span class="score"></span></div>
+        <div>Time: <span class="timer">00:00</span></div>
+        <div class="numOfClicks">Moves: <span class="clicks"></span></div>
+        <div>
+            <button id="reset-button" class="btn">Reset Game</button>
+        </div>
+    </div>
+
+    <div class="game-container" id="game-container"></div>
+    <!-- <div class="results"></div> -->
+
     <div class="mainScreen">
         <p>Select deck of cards to play</p>
         <div class="decks">
@@ -33,26 +57,6 @@
             </div>
         </div>
     </div>
-    <div class="data">
-        <div class="levelSelector">
-            <select name="level" id="level">
-                <option value="1" selected>Level 1</option>
-                <option value="2">Level 2</option>
-                <option value="3">Level 3</option>
-                <option value="4">Level 4</option>
-                <option value="5">Level 5</option>
-            </select>
-        </div>
-        <div class="scoreDisplay">Score: <span class="score"></span></div>
-        <div class="timer">00:00</div>
-    </div>
-
-    <div class="game-container" id="game-container"></div>
-    <!-- <div class="results"></div> -->
-    <div class="btn">
-        <button id="reset-button">Reset Game</button>
-    </div>
-
 </body>
 
 </html>

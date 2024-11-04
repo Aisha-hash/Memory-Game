@@ -27,8 +27,9 @@ const ajax = {
         const numCards = payload.splice(0, level);
         cards = [...numCards, ...numCards];
         settings.cardsLength = cards.length;
-        generate.shuffleCards(cards);
-        generate.generateCards(cards);
+        settings.cards = cards;
+        generate.shuffleCards();
+        generate.generateCards();
     }
 }
 
