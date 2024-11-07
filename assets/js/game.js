@@ -119,7 +119,8 @@ const game = {
         settings.flipped = 0;
         settings.numOfClicks = 0;
         settings.level = 1;
-        elements.displayElement.style.display = 'none';
+        if (elements.displayElement)
+            elements.displayElement.style.display = 'none';
         elements.gameContainer.style.display = 'grid';
         elements.selector.value = String(settings.level);
         const event = new Event('change');
@@ -141,7 +142,7 @@ const checkIfDone = () => {
             <p class="score">Score: ${settings.score}</p>
             <p class="score">Highscore: ${settings.previousScore}</p>
             <p>Time: ${String(elapsedMinutes).padStart(2, '0')}:${String(elapsedSeconds).padStart(2, '0')}</p>
-            <p>No. of Clicks: ${clicks}</p>
+            <p>Moves: ${clicks}</p>
             </div>`;
     elements.gameContainer.before(elements.displayElement);
     elements.gameContainer.style.display = 'none';
@@ -162,6 +163,15 @@ const checkIfDone = () => {
         elements.cancelButton.addEventListener('click', game.restart);
     } else {
         elements.resetButton.style.display = 'block';
+        function startShaking() {
+            elements.resetButton.classList.add('pulse');
+        }
+        let pulseInterval = setInterval(startShaking, 1000);
+
+        elements.resetButton.addEventListener('click', () => {
+            elements.resetButton.classList.remove('pulse');
+            clearInterval(pulseInterval);
+        });
     }
 }
 

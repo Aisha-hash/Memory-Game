@@ -1,8 +1,6 @@
 'use strict';
 import settings, { elements } from "./settings.js";
 import ajax from "./ajax.js";
-import dom from "./dom.js";
-
 
 const welcome = {
     welcomeScreen() {

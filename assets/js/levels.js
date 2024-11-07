@@ -40,7 +40,7 @@ const level = {
     levelFive() {
         settings.level = 5;
         settings.numOfCards = 12;
-        settings.cardsWidth = '6em';
+        settings.cardsWidth = '5.8em';
         elements.gameContainer.style.gridTemplateColumns = `repeat(6,${settings.cardsWidth})`;
         elements.gameContainer.style.gridTemplateRows = `repeat(4, calc(${settings.cardsWidth}/2 *3))`;
         ajax.loadData();
